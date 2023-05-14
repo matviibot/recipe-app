@@ -14,10 +14,12 @@ import {
 } from "./components/atoms/Text";
 import RecipeCard from "./components/molecules/RecipeCard";
 import './App.css';
+import SearchBar from "./components/molecules/SearchBar";
 
 function App() {
     return (
-        <div className="App ">
+        <div className="App">
+            <SearchBar/>
             <h1>Text Variants</h1>
             <PrimaryText>Primary Text</PrimaryText>
             <SecondaryText>Secondary Text</SecondaryText>
