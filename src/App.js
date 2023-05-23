@@ -1,25 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import RecipeList from "./components/organisms/RecipeList";
+import Header from "./components/organisms/Header/Header";
+import {useState} from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [request, setRequest] = useState('cake')
+    return (
+        <div className="App">
+            <Header setRequest={setRequest}/>
+            <RecipeList request={request}/>
+        </div>
+    );
 }
 
 export default App;
