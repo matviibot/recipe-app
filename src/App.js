@@ -1,5 +1,5 @@
 import './App.css';
-import RecipeList from "./components/organisms/RecipeList/RecipeList";
+import RecipeList from "./components/organisms/RecipeList";
 import Header from "./components/organisms/Header/Header";
 import {useState} from "react";
 

@@ -46,11 +46,11 @@ const RecipeList = ({request}) => {
         <>
             {modal && <RecipeModal recipe={currentRecipe} toggleModal={toggleModal} />}
 
-            <h1>{request.charAt(0).toUpperCase() + request.slice(1)} Recipes</h1>
+            <h1 className={"m-3"}>{request.charAt(0).toUpperCase() + request.slice(1)} Recipes</h1>
 
             <div className="row m-2">
                 {recipes?.map((r) => (
-                    <div className="col-12 col-sm-6 col-lg-4 col-xl-3" key={r.recipe.label}>
+                    <div className="col-12 col-sm-6 col-lg-4 col-xl-3" key={r.recipe.uri}>
                         <div className="d-flex justify-content-center">
                             <RecipeCard toggleModal={(r) => toggleModal(r)} type={r.recipe.mealType} image={r.recipe.image} title={r.recipe.label} text="sup recipe" />
                         </div>
