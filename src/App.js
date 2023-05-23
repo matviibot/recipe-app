@@ -4,7 +4,7 @@ import Header from "./components/organisms/Header/Header";
 import {useState} from "react";
 
 function App() {
-    const [request, setRequest] = useState('soup')
+    const [request, setRequest] = useState('cake')
     return (
         <div className="App">
             <Header setRequest={setRequest}/>

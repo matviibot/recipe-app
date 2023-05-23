@@ -14,15 +14,17 @@ const SearchBar = ({setRequest}) => {
         setRequest(value)
     }
     return (
+        <div className={'container d-flex justify-content-center'}>
         <div className={styles['search-bar']}>
             <div className="input-group">
             <span className="input-group-text bg-dark text-light border-0">
               <i className="bi bi-search"></i>
             </span>
-                <SearchInput onChange={e => handleInput(e)} value={value} placeholder="Search for recipes"/>
+                <SearchInput onSubmit={handleSubmit} onChange={e => handleInput(e)} value={value} placeholder="Search for recipes"/>
                 <PrimaryButton onClick={handleSubmit} >Search</PrimaryButton>
             </div>
 
+            </div>
         </div>
     );
 };
