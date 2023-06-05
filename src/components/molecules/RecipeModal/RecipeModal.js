@@ -10,12 +10,12 @@ const RecipeModal = ({recipe, toggleModal}) => {
     };
     return (
         <div className={styles['modal-overlay']} onClick={handleOverlayClick}>
-            <div className={`${styles['recipe-modal']} ${styles['wide']}`}>
+            <div className={`${styles['recipe-modal']+" bg-dark"} ${styles['wide']}`}>
                 <div className={styles['image-container']}>
                     <img src={recipe.image} className={styles['image']} alt={recipe.label} />
                     <div className={styles['overlay']}></div>
                 </div>
-                <div className={styles['modal-content']}>
+                <div className={styles['modal-content']+" text-light"}>
                     <h5 className={styles['modal-title']}>{recipe.label}</h5>
                     <p className={styles['modal-description']}>{recipe.description}</p>
                     <ul className={styles['modal-details']}>
@@ -29,7 +29,7 @@ const RecipeModal = ({recipe, toggleModal}) => {
                         </li>
 
                     </ul>
-                    <PrimaryButton><a href={recipe.shareAs} target="_blank" rel="noopener noreferrer" className={styles['modal-link']}>Full Recipe</a></PrimaryButton>
+                    <PrimaryButton className={"btn-light text-dark"}><a href={recipe.shareAs} target="_blank" rel="noopener noreferrer" className={styles['modal-link']+" text-dark"}>Full Recipe</a></PrimaryButton>
                 </div>
             </div>
         </div>

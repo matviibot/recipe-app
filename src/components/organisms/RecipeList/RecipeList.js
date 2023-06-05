@@ -38,15 +38,15 @@ const RecipeList = ({request}) => {
         console.log(currentRecipe)
     };
     if (isLoading){
-        return <div className="text-dark h3">Loading...</div>
+        return <div className="text-light h3">Loading...</div>
     } else if(!recipes[0]){
-        return <div className="text-dark h3">Sorry, we can't find {request.charAt(0).toUpperCase() + request.slice(1)} Recipes</div>
+        return <div className="text-light h3">Sorry, we can't find {request.charAt(0).toUpperCase() + request.slice(1)} Recipes</div>
     }else {
     return (
         <>
             {modal && <RecipeModal recipe={currentRecipe} toggleModal={toggleModal} />}
 
-            <h1 className={"m-3"}>{request.charAt(0).toUpperCase() + request.slice(1)} Recipes</h1>
+            <h1 className={"m-3 text-light"}>{request.charAt(0).toUpperCase() + request.slice(1)} Recipes</h1>
 
             <div className="row m-2">
                 {recipes?.map((r) => (
@@ -58,7 +58,7 @@ const RecipeList = ({request}) => {
                 ))}
             </div>
             <div className="m-3 d-flex float-end">
-                <PrimaryButton onClick={()=>getRecipes(response._links.next.href)}>Next Page</PrimaryButton>
+                <PrimaryButton className={"btn-light"} onClick={()=>getRecipes(response._links.next.href)} >Next Page</PrimaryButton>
             </div>
         </>
     );}

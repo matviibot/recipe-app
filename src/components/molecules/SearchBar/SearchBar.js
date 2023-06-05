@@ -23,7 +23,7 @@ const SearchBar = ({ setRequest }) => {
             <i className="bi bi-search"></i>
           </span>
                     <SearchInput onChange={handleInput} value={value} placeholder="Search for recipes" />
-                    <PrimaryButton type="submit">Search</PrimaryButton>
+                    <PrimaryButton className={"btn-light"} type="submit">Search</PrimaryButton>
                 </div>
             </div>
         </form>
